@@ -121,23 +121,6 @@ def mask_det():
 	
 	#------------------------------------------------------------------------------#
 
-	# load the COCO class labels our YOLO model was trained on
-	labelsPath = os.path.sep.join([config.MODEL_PATH, "coco.names"])
-	LABELS = open(labelsPath).read().strip().split("\n")
-
-	# derive the paths to the YOLO weights and model configuration
-
-	# check if we are going to use GPU
-	if config.USE_GPU:
-		# set CUDA as the preferable backend and target
-		print("")
-		print("[INFO] Looking for GPU")
-		net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
-		net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
-
-	# determine only the *output* layer names that we need from YOLO
-	ln = net.getLayerNames()
-	ln = [ln[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 
 	# if a video path was not supplied, grab a reference to the camera
 	if not args.get("input", False):
