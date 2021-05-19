@@ -149,9 +149,9 @@ def mask_det():
 	FRAME_WINDOW= st.image([])
 	# load our serialized face detector model from disk
 	print("[INFO] loading face detector model...")
-	prototxtPath = r"C:\Users\Subhash\Desktop\Personal\Finalyearproject\FINAL-TRACKER-BOTH-MASK-SOCIAL\face_detector\deploy.prototxt"
+	prototxtPath = r"face_detector\deploy.prototxt"
 	#print(prototxtPath)
-	weightsPath = r"C:\Users\Subhash\Desktop\Personal\Finalyearproject\FINAL-TRACKER-BOTH-MASK-SOCIAL\face_detector\res10_300x300_ssd_iter_140000.caffemodel"
+	weightsPath = "\face_detector\res10_300x300_ssd_iter_140000.caffemodel"
 	faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 
 	# load the face mask detector model from disk
