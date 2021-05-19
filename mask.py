@@ -125,17 +125,17 @@ def mask_det():
 	# if a video path was not supplied, grab a reference to the camera
 	if not args.get("input", False):
 		print("[INFO] Starting the live stream..")
-		vs = cv2.VideoCapture(config.url)
+		vs = cv2.VideoCapture(0)
 		if config.Thread:
-				cap = thread.ThreadingClass(config.url)
+				cap = thread.ThreadingClass(0)
 		time.sleep(2.0)
 
 	# otherwise, grab a reference to the video file
 	else:
 		print("[INFO] Starting the video..")
-		vs = cv2.VideoCapture(args["input"])
+		vs = cv2.VideoCapture0)
 		if config.Thread:
-			cap = thread.ThreadingClass(args["input"])
+			cap = thread.ThreadingClass(0)
 
 	writer = None
 	# start the FPS counter
