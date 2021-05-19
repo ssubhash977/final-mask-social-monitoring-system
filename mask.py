@@ -133,7 +133,7 @@ def mask_det():
 	# otherwise, grab a reference to the video file
 	else:
 		print("[INFO] Starting the video..")
-		vs = cv2.VideoCapture0)
+		vs = cv2.VideoCapture(0)
 		if config.Thread:
 			cap = thread.ThreadingClass(0)
 
