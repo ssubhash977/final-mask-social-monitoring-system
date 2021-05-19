@@ -126,11 +126,6 @@ def mask_det():
 	LABELS = open(labelsPath).read().strip().split("\n")
 
 	# derive the paths to the YOLO weights and model configuration
-	weightsPath = os.path.sep.join([config.MODEL_PATH, "yolov3.weights"])
-	configPath = os.path.sep.join([config.MODEL_PATH, "yolov3.cfg"])
-
-	# load our YOLO object detector trained on COCO dataset (80 classes)
-	net = cv2.dnn.readNetFromDarknet(configPath, weightsPath)
 
 	# check if we are going to use GPU
 	if config.USE_GPU:
